@@ -22,9 +22,13 @@ function totalPhoneBill() {
         }
         if (total > 20) {
             billTotal.classList.add("warning");
+        }else {
+            billTotal.classList.remove("warning")
         }
         if (total > 30) {
             billTotal.classList.add("danger");
+        }else {
+            billTotal.classList.remove("danger")
         }
     }
     billTotal.innerHTML = total.toFixed(2);;
