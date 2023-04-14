@@ -9,7 +9,7 @@ var billTotal = document.querySelector(".billTotal")
 //  * loop over all the entries in the the resulting list
 //  * check if it is a call or an sms and add the right amount to the overall total
 //  * once done looping over all the entries - display the total onto the screen in the billTotal element
-function totalPhoneBill() {
+function calculatePhoneBill() {
     let bill = billString.value.toLowerCase();
     var phoneBill = bill.split(",");
     var total = 0;
@@ -34,5 +34,5 @@ function totalPhoneBill() {
     billTotal.innerHTML = total.toFixed(2);;
 }
 calculateBtn.addEventListener("click", function(){
-    totalPhoneBill();
+    calculatePhoneBill();
 });
