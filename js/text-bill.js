@@ -16,10 +16,11 @@ var totalCost = 0
 // * add nothing for invalid values that is not 'call' or 'sms'.
 // * display the latest total on the screen
 function calculateTextBill() {
-    if (billTypeText.value === "call") {
+    let stringBills = billTypeText.value.toLowerCase()
+    if (stringBills === "call") {
         callTotal += 2.75;
     }
-    else if (billTypeText.value === "sms") {
+    else if (stringBills === "sms") {
             smsTotal += 0.75;
     }
     else {
