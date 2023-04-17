@@ -1,5 +1,5 @@
 // get a reference to the sms or call radio buttons
-/*var billItemTypeWithSettings = document.querySelector(".billItemType")
+var billItemTypeWithSettings = document.querySelector(".billItemType")
 // get refences to all the settings fields
 var callTotalSettings = document.querySelector(".callTotalSettings")
 var smsTotalSettings = document.querySelector(".smsTotalSettings")
@@ -34,10 +34,10 @@ function calculateSettingsBill() {
         var billItemTypeWithSettings = checkedSettingsBtn.value
     }
     if (billItemTypeWithSettings === "call") {
-        totalCalls += callTotalSettings;
+        totalCalls += callTotalSettings.value;
     }
     else if (billItemTypeWithSettings === "sms") {
-            totalSmses += smsTotalSettings;
+            totalSmses += smsTotalSettings.value;
     }
     else {
         totalCosts += 0
@@ -48,10 +48,11 @@ function calculateSettingsBill() {
     smsTotalThree.innerHTML = totalSmses.toFixed(2);
     totalThree.innerHTML = totalCosts.toFixed(2);
 
-    if (totalCosts > warningLevelSetting) {
+
+    if (totalCosts > warningLevelSetting.value) {
         totalThree.classList.add("warning");
     }
-    if (totalCosts > criticalLevelSetting) {
+    if (totalCosts > criticalLevelSetting.value) {
         totalThree.classList.add("danger");
     }
 }
@@ -62,4 +63,3 @@ radioAddButton.addEventListener("click", function(){
 updateSettings.addEventListener("click", function(){
     calculateSettingsBill();
 });
-*/
