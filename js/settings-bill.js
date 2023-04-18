@@ -61,7 +61,14 @@ function calculateBillSettings(){
     if(settingsTotal >= criticalLevelSetting.value){
         totalSettings.classList.add('danger');
     }
+}
 
+settingsAddButton.addEventListener("click", function(){
+    calculateBillSettings();
+});
+
+//an added an event listener to update all settings
+updateSettings.addEventListener("click", function(){
     smsSettings = smsCostSetting.value 
     callSettings = callCostSetting.value
     warningLevel = warningLevelSetting.value
@@ -73,12 +80,4 @@ function calculateBillSettings(){
     if(criticalLevelSetting.value >= settingsTotal){
         totalSettings.classList.remove('danger');
     }
-}
-
-settingsAddButton.addEventListener("click", function(){
-    calculateBillSettings();
-});
-
-updateSettings.addEventListener("click", function(){
-    calculateBillSettings();
 });
