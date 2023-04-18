@@ -20,12 +20,12 @@ function calculatePhoneBill() {
         else if (phoneBill[i].trim() === "sms") {
             total += 0.75;
         }
-        if (total > 20) {
+        if (total >= 20) {
             billTotal.classList.add("warning");
         }else {
             billTotal.classList.remove("warning")
         }
-        if (total > 30) {
+        if (total >= 30) {
             billTotal.classList.add("danger");
         }else {
             billTotal.classList.remove("danger")

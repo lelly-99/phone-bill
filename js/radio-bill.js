@@ -36,10 +36,10 @@ function calculateRadioBill() {
     smsTotalTwo.innerHTML = totalSms.toFixed(2);
     totalTwo.innerHTML = costTotal.toFixed(2);
 
-    if (costTotal > 30) {
+    if (costTotal >= 30) {
         totalTwo.classList.add("warning");
     }
-    if (costTotal > 50) {
+    if (costTotal >= 50) {
         totalTwo.classList.add("danger");
     }
 }
